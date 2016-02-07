@@ -8,12 +8,12 @@ import hockey.api.ITeam;
 public class Team implements ITeam {
 	// Team Short Name. Max 4 characters.
 	public String getShortName() {
-		return "∰☯☃⌨";
+		return "QED";
 	}
 
 	// Team Name
 	public String getTeamName() {
-		return "BreakForWhile";
+		return "Quantum Electro-Dynamics";
 	}
 
 	// Team color; body color
@@ -40,15 +40,15 @@ public class Team implements ITeam {
 	public Player getPlayer(int index) {
 		switch (index) {
 		case 1:
-			return new Defender(); // Left defender
+			return new Defender("Emanuel"); // Left defender
 		case 2:
-			return new DaPlayer(); // Right defender
+			return new DaPlayer("Johan"); // Right defender
 		case 3:
-			return new DaPlayer(); // Left forward
+			return new DaPlayer("Simon"); // Left forward
 		case 4:
-			return new DaPlayer(); // Right forward
+			return new DaPlayer("Anton"); // Right forward
 		case 5:
-			return new DaPlayer(); // Center
+			return new DaPlayer("Oskar"); // Center
 		}
 		return null;
 	}

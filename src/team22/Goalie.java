@@ -15,7 +15,7 @@ public class Goalie extends GoalKeeper {
 	public int getNumber() { return 1; }
 
 	// Name of the goalie.
-	public String getName() { return "Göran v‾‾v"; }
+	public String getName() { return "Pär"; }
 
 	// Left handed goalie
 	public boolean isLeftHanded() { return true; }
@@ -52,7 +52,7 @@ public class Goalie extends GoalKeeper {
 				dy += puck.getY();
 				if (-120 < dy && dy < 120) {
 					// will hit dy! shit
-					setMessage("shit shit shit " + puck.getHeading() + " " + String.format("%.2f", dy));
+					// setMessage("shit shit shit " + puck.getHeading() + " " + String.format("%.2f", dy));
 					int speed;
 					dy = Util.clampAbs(dy, 100);
 					if (puck.isHeld()) {
@@ -88,11 +88,11 @@ public class Goalie extends GoalKeeper {
 					turn(getPuck(), MAX_TURN_SPEED);
 					return;
 				}
-				else setMessage("puh position " + String.format("%.2f", dy));
+				// else setMessage("puh position " + String.format("%.2f", dy));
 			}
-			else setMessage("puh angle " + angle + dbgStr);
+			// else setMessage("puh angle " + angle + dbgStr);
 		}
-		else setMessage("puh speed " + puck.getSpeed() + dbgStr);
+		// else setMessage("puh speed " + puck.getSpeed() + dbgStr);
 		lastAngle = -1000;
 
 		// slow or wrong; keep it safe

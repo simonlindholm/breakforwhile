@@ -6,6 +6,11 @@ import hockey.api.IPlayer;
 
 public class DaPlayer extends BasePlayer {
 	Random rand = new Random();
+	String name;
+
+	public DaPlayer(String name) {
+		this.name = name;
+	}
 
 	// Number of center player
 	public int getNumber() {
@@ -14,7 +19,7 @@ public class DaPlayer extends BasePlayer {
 
 	// Name of center player
 	public String getName() {
-		return "DaPlayer";
+		return name;
 	}
 
 	// Center player's intelligence

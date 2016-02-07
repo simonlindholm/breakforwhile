@@ -7,14 +7,14 @@ import hockey.model.Player;
 
 public class Defender extends DaPlayer {
 	boolean wehaveit = true;
+
+	public Defender(String name) {
+		super(name);
+	}
+
 	// Number of defender
 	public int getNumber() {
 		return 10;
-	}
-
-	// Name of defender
-	public String getName() {
-		return "Diego the Defender";
 	}
 
 	// Make left defender left handed, right defender right handed.
@@ -35,12 +35,12 @@ public class Defender extends DaPlayer {
 		}
 		
 		if(hasPuck() || (!wehaveit && getPuck().getX() > 1000)) {
-			setMessage("Ima center!");
+			// setMessage("Ima center!");
 			super.step();
 			return;
 		}
 		
-		setMessage("lalala..");
+		// setMessage("lalala..");
 		skate(-1500, 0, 300);
 	}
 }
